@@ -1,0 +1,11 @@
+*.hi
+*.ho
+TAGS
+*.log
+*.profile
+/dist
+/cabal.config
+
+/.stack-work/
+/.cabal-sandbox/
+.DS_Store

@@ -1,0 +1,39 @@
+name:                gildedrose
+version:             0.1.0.0
+
+extra-source-files:
+- README.md
+- gold-master.txt
+
+description:         Please see the README
+
+dependencies:
+- base >= 4.7 && < 5
+- hspec
+
+library:
+  source-dirs: src
+
+executables:
+  gildedrose-exe:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - gildedrose
+
+tests:
+  gildedrose-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - gildedrose

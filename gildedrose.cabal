@@ -1,0 +1,58 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: eac418e82b773a4887bebaf3739d439124c209448902e1199132d8c4ee9e001c
+
+name:           gildedrose
+version:        0.1.0.0
+description:    Please see the README
+build-type:     Simple
+extra-source-files:
+    README.md
+    gold-master.txt
+
+library
+  exposed-modules:
+      GildedRose
+      Main
+  other-modules:
+      Paths_gildedrose
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
+
+executable gildedrose-exe
+  main-is: Main.hs
+  other-modules:
+      GildedRose
+      Paths_gildedrose
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , gildedrose
+    , hspec
+  default-language: Haskell2010
+
+test-suite gildedrose-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      GildedRoseSpec
+      GildedRoseSpecDefinitions
+      Paths_gildedrose
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , gildedrose
+    , hspec
+  default-language: Haskell2010
